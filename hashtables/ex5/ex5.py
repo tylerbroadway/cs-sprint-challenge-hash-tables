@@ -11,7 +11,7 @@ def finder(files, queries):
     result = []
 
     for file in files:
-        key = file.rsplit("/", 1)[1]
+        key = file.split("/")[-1]
 
         if key not in cache:
             cache[key] = []
