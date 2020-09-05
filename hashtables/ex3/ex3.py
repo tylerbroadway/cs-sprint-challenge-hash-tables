@@ -3,6 +3,15 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    cache = {}
+    result = []
+
+    for arr in arrays:
+        for num in arr:
+            if num not in cache:
+                cache[num] = None
+            elif num not in result:
+                result.append(num)
 
     return result
 
